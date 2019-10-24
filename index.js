@@ -3,7 +3,7 @@ const SOURCE = require('./lib/source');
 const print = require('./lib/print');
 const Entities = require('html-entities').AllHtmlEntities;
 const entities = new Entities();
-const parseString = require('xml2js').parseString;
+// const parseString = require('xml2js').parseString;
 const isChinese = require('is-chinese');
 const ora = require('ora');
 
@@ -18,29 +18,29 @@ module.exports = function(word, options, callback) {
     // do nothing
   }
 
-  let count = 0;
+  // let count = 0;
   const callbackAll = () => {
-    count += 1;
-    if (count >= 3) {
+    // count += 1;
+    // if (count >= 3) {
       spinner.stop();
       callback && callback();
-    }
+    // }
   };
 
   word = encodeURIComponent(word);
 
   // iciba
-  request.get(SOURCE.iciba.replace('${word}', word), function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      parseString(body, function (err, result) {
-        if (err) {
-          return;
-        }
-        print.iciba(result.dict, options);
-      });
-    }
-    callbackAll();
-  });
+  // request.get(SOURCE.iciba.replace('${word}', word), function (error, response, body) {
+  //   if (!error && response.statusCode == 200) {
+  //     parseString(body, function (err, result) {
+  //       if (err) {
+  //         return;
+  //       }
+  //       print.iciba(result.dict, options);
+  //     });
+  //   }
+  //   callbackAll();
+  // });
 
   // youdao
   request.get(SOURCE.youdao.replace('${word}', word), function (error, response, body) {
@@ -49,6 +49,7 @@ module.exports = function(word, options, callback) {
         const data = JSON.parse(entities.decode(body));
         print.youdao(data, options);
       } catch(e) {
+        console.log('来自您key的翻译API请求异常频繁，为保护其他用户的正常访问，只能暂时禁止您目前key的访问')
         // 来自您key的翻译API请求异常频繁，为保护其他用户的正常访问，只能暂时禁止您目前key的访问
       }
     }
@@ -56,14 +57,14 @@ module.exports = function(word, options, callback) {
   });
 
   // dictionaryapi
-  request.get(SOURCE.dictionaryapi.replace('${word}', word), function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      parseString(body, function (err, result) {
-        if (!err) {
-          print.dictionaryapi(result.entry_list.entry, word, options);
-        }
-      });
-    }
-    callbackAll();
-  });
+  // request.get(SOURCE.dictionaryapi.replace('${word}', word), function (error, response, body) {
+  //   if (!error && response.statusCode == 200) {
+  //     parseString(body, function (err, result) {
+  //       if (!err) {
+  //         print.dictionaryapi(result.entry_list.entry, word, options);
+  //       }
+  //     });
+  //   }
+  //   callbackAll();
+  // });
 };

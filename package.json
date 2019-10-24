@@ -1,17 +1,17 @@
 {
-  "name": "fanyi",
-  "version": "2.1.0",
+  "name": "unknow",
+  "version": "1.0.2",
   "description": "A translate tool in your command line",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:afc163/fanyi.git"
+    "url": "https://github.com/yingpengsha/unknow.git"
   },
-  "author": "afc163 <afc163@gmail.com>",
+  "author": "yingpengsha <yingpengsha@foxmail.com>",
   "license": "MIT",
   "bin": {
-    "fy": "./bin/fanyi",
-    "fanyi": "./bin/fanyi"
+    "know": "./bin/know",
+    "kn": "./bin/know"
   },
   "keywords": [
     "translate",
@@ -22,7 +22,8 @@
     "command line",
     "cli",
     "translation",
-    "fanyi"
+    "fanyi",
+    "know"
   ],
   "engines": {
     "node": ">=6.0.0"

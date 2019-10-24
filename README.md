@@ -1,38 +1,36 @@
 <div align="center">
 
-# Fanyi 🌐
+# Unknow 🌐
 
 A translate tool in your terminal.
 
-[![NPM version](https://img.shields.io/npm/v/fanyi.svg?style=flat-square)](https://npmjs.org/package/fanyi)
-[![Build Status](https://img.shields.io/travis/afc163/fanyi.svg?style=flat-square)](https://travis-ci.org/afc163/fanyi)
-[![David Status](https://img.shields.io/david/afc163/fanyi.svg?style=flat-square)](https://david-dm.org/afc163/fanyi)
-[![NPM downloads](http://img.shields.io/npm/dm/fanyi.svg?style=flat-square)](https://npmjs.org/package/fanyi)
+[![NPM version](https://img.shields.io/npm/v/unknow.svg?style=flat-square)](https://npmjs.org/package/unknow)
+[![NPM downloads](http://img.shields.io/npm/dm/unknow.svg?style=flat-square)](https://npmjs.org/package/unknow)
 [![](https://badge.juejin.im/entry/5be959e16fb9a049ec6a9908/likes.svg?style=flat-square)](https://juejin.im/entry/5be959e16fb9a049ec6a9908/detail)
 
-![](https://gw.alipayobjects.com/zos/rmsportal/EAuwmtfxDGueGOdUgVKc.png)
+![](http://www.yingpengsha.com/content/images/2019/10/image-12.png)
 
 </div>
 
 ## Install
 
 ```bash
-$ npm install fanyi -g
+$ npm install unknow -g
 ```
 
 ## Usage
 
 ```bash
-$ fanyi word
+$ know word
 ```
 
 For short:
 
 ```bash
-$ fy word
+$ kn word
 ```
 
-Translation data is fetched from [iciba.com](http://iciba.com) and [fanyi.youdao.com](http://fanyi.youdao.com),
+Translation data is fetched from [fanyi.youdao.com](http://fanyi.youdao.com),
 and only support translation between Chinese and English.
 
 In Mac/Linux bash, words will be pronounced  by `say` command.
@@ -40,55 +38,36 @@ In Mac/Linux bash, words will be pronounced  by `say` command.
 Translate one word.
 
 ```bash
-$ fanyi love
+$ know love
 ```
 
 ```js
- love  [ lʌv ]  ~  fanyi.youdao.com
-
- - n. 恋爱；亲爱的；酷爱；喜爱的事物；爱情，爱意；疼爱；热爱；爱人，所爱之物
- - v. 爱，热爱；爱戴；赞美，称赞；喜爱；喜好；喜欢；爱慕
- - n. （英）洛夫（人名）
-
- 1. Love
-    爱,爱情,恋爱
+ love  [ lʌv ] - n. 爱；爱情；喜好；（昵称）亲爱的；爱你的；心爱的人；钟爱之物；零分
+ love  [ lʌv ] - v. 爱恋（某人）；关爱；喜欢（某物或某事）；忠于
+ love  [ lʌv ] - n. (Love) （英、菲、瑞、美）洛夫（人名）
+ 
+ 1. love
+    爱,爱情,爱心
  2. Endless Love
-    无尽的爱,不了情,蓝色生死恋
+    无尽的爱,蓝色生死恋,不了情
  3. puppy love
     早恋,青春期恋爱,初恋
-
- love [ lʌv ] [ lʌv ]  ~  iciba.com
-
- - vt.&vi. 爱，热爱；爱戴；喜欢；赞美，称赞；
- - vt. 喜爱；喜好；喜欢；爱慕；
- - n. 爱情，爱意；疼爱；热爱；爱人，所爱之物；
-
- 1. They happily reflect the desire for a fusional love that inspired the legendary LOVE bracelet Cartier.
-    快乐地反映出为富有传奇色彩的卡地亚LOVE手镯所赋予的水乳交融之爱恋情愫。
- 2. Love is the radical of lovely, loveliness, and loving.
-    Love是lovely,loveliness及loving的词根。
- 3. She rhymes"love"with"dove".
-    她将"love"与"dove"两字押韵。
- 4. In sports, love means nil.
-    体育中，love的意思是零。
- 5. Ludde Omholt with his son, Love, in S?derma a bohemian and culturally rich district in Stockholm.
-    LuddeOmholt和他的儿子Love在南城——斯德哥尔摩市的一个充满波西米亚风情的文化富饶区散步。
 ```
 
 More words.
 
 ```bash
-$ fanyi make love
+$ know make love
 ```
 
 Support Chinese, even sentence.
 
 ```bash
-$ fanyi 和谐
+$ know 和谐
 ```
 
 ```bash
-$ fanyi 子非鱼焉知鱼之乐
+$ know 子非鱼焉知鱼之乐
 ```
 
 ##  Error: spawn festival ENOENT
